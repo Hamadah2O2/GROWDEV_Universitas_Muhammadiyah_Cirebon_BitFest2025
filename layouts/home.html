@@ -1,0 +1,37 @@
+{{ define "main" }}
+    <!-- Hero Section -->
+    <div id="hero" class="relative h-screen w-full">
+        <!-- gradient overlay -->
+        <div class="from-primary-dark absolute top-0 left-0 h-full w-full bg-gradient-to-tr from-48% to-transparent opacity-90"></div>
+
+        <!-- Background Image  -->
+        {{- with resources.Get "images/UCIC-Background.jpg" -}}
+            <img src="{{ .RelPermalink }}" class="h-full w-full object-cover" alt="" />
+        {{- end -}}
+
+
+        <!-- Hero Content -->
+        <div class="absolute top-0 left-0 h-full w-full">
+            <div class="container mx-auto flex h-full items-center justify-center px-4 pt-8 sm:px-6 lg:px-8">
+                <div class="w-1/2">
+                    <h1 class="mb-5 text-5xl font-bold text-nowrap text-yellow-300">
+                        Technopreneur
+                        <span class="text-blue-400 uppercase">UNIVERSITY</span>
+                    </h1>
+                    <span class="mb-2 inline-block text-2xl text-white">Becoming a Technopreneur on an Independent Campus</span>
+                    <a href="#" class="bg-primary mt-4 inline-block rounded-lg border-[1px] border-gray-100 px-4 py-2 text-lg font-bold text-yellow-300">Join Us!</a>
+                </div>
+                <div class="flex w-1/2 justify-center">
+                    <div class="hidden h-52 w-52 rounded-full bg-red-700 p-7"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content  -->
+    {{ .Content }}
+    {{ range site.RegularPages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+    {{ end }}
+{{ end }}

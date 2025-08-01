@@ -1,0 +1,11 @@
+@import "tailwindcss" source("../../layouts/");
+
+@theme {
+  --font-sans: "Poppins", "sans-serif";
+
+  --color-primary: #0352A1;
+  --color-primary-opacity-75: #0352a1bf;
+  --color-primary-dark: #002E5B;
+  --color-primary-light: #308AD0;
+  --color-warning: #FFC300;
+}

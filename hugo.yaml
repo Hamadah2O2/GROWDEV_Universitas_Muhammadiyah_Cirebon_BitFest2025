@@ -1,0 +1,42 @@
+baseURL: https://example.org/
+languageCode: en-US
+title: UCIC
+
+menus:
+  main:
+    - name: Home Page
+      pageRef: /
+      weight: 1
+
+    - name: Hero
+      pageRef: /
+      weight: 2
+      params: 
+        fragment: hero
+
+    - name: Profile
+      pageRef: /
+      weight: 3
+      params: 
+        fragment: about
+
+    - name: Posts
+      pageRef: /posts
+      weight: 4
+
+    - name: Tags
+      pageRef: /tags
+      weight: 5
+
+module:
+  hugoVersion:
+    extended: false
+    min: 0.146.0
+
+params:
+  email: info@cic.ac.id
+  phone_number: +62 231-2004-18
+  address: Jl. Kesambi No. 202, Cirebon City
+  socials: 
+    - name: instagram
+      link: https://www.instagram.com/universitas_cic

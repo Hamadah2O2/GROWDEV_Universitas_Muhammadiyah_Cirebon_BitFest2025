@@ -1,0 +1,16 @@
+<div class="border-b-[1px] border-b-white bg-primary">
+    <div class="container mx-auto px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between text-sm text-white">
+            {{ $email := .Site.Params.email }}
+            {{ $phone := .Site.Params.phone_number }}
+            <div>
+                <a href="mailto:{{- $email -}}" class="me-3 underline">{{- $email -}}</a>
+                <a href="tel:{{- replaceRE `[-_\s]` "" $phone -}}" class="border-l-1 border-l-gray-100 ps-2.5">{{- $phone -}}</a>
+            </div>
+            <div>
+                <a href="mailto:{{- $email -}}" class="me-3 underline">{{- $email -}}</a>
+                <a href="tel:{{- replaceRE `[-_\s]` "" $phone -}}" class="border-l-1 border-l-gray-100 ps-2.5">{{- $phone -}}</a>
+            </div>
+        </div>
+    </div>
+</div>
