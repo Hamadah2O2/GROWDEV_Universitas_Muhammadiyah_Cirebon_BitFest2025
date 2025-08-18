@@ -1,4 +1,5 @@
 /node_modules
+/assets/css/main.css
 /resources/_gen
 /public
 /.hugo_build.lock
