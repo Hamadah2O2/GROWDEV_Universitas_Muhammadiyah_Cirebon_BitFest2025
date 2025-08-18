@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tailwindcss-animated';
+@import 'tailwindcss-intersect';
 
 @theme {
     --font-sans: 'Poppins', 'sans-serif';
@@ -17,12 +18,13 @@
     inline-block
     rounded-xl
     bg-primary
-    px-8
-    py-4
+    px-6
+    py-3
     text-lg
     font-bold
     text-yellow-300
     shadow-lg;
+    border: 2px solid var(--color-primary);
 
     &:hover {
         @apply
@@ -51,10 +53,10 @@
 
     &:not(.bg-transparent) {
         & img {
-            @apply h-17;
+            @apply h-20;
         }
         & .nav-link {
-            @apply flex h-17 items-center text-gray-900 transition px-6 hover:text-gray-900/75;
+            @apply flex h-20 items-center text-gray-900 transition px-6 hover:text-gray-900/75;
         }
     }
 }
