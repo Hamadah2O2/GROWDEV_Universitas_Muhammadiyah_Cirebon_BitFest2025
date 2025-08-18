@@ -26,7 +26,7 @@
             {{ $href = printf "%s#%s" $href . }}
         {{- end }}
         {{- $attrs := dict "href" $href }}
-        {{- $classList := " flex h-28 items-center text-gray-50 transition px-6 hover:text-gray-200/75" -}}
+        {{- $classList := " nav-link" -}}
 
         {{- if $page.IsMenuCurrent .Menu . }}
             {{- $attrs = merge $attrs (dict "class" (add "active" $classList) "aria-current" "page") }}

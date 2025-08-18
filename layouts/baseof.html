@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
     <head>
-        <head class="apake"></head>
         {{ partial "head.html" . }}
     </head>
     <body>
@@ -9,7 +8,7 @@
             {{ if eq .Kind "home" }}
                 {{ partial "information_bar.html" . }}
             {{ end }}
-            <header class="sticky top-0 left-0 z-10 h-0 overflow-visible">
+            <header class="sticky top-0 left-0 z-10 h-0" id="header">
                 {{ partial "header.html" . }}
             </header>
         {{ end }}
@@ -21,7 +20,7 @@
                 {{ partial "footer.html" . }}
             </footer>
         {{ end }}
-        <div class="fixed right-5 bottom-5 rounded-full bg-gradient-to-tr from-white from-20% to-gray-400 px-5 py-2 text-lg font-bold text-red-500 shadow-md">
+        <div class="fixed right-5 bottom-5 rounded-full bg-gradient-to-tr from-gray-100 from-20% to-gray-300 px-5 py-2 text-lg font-bold text-red-500 shadow-md hover:text-blue-400">
             {{ .Kind }}
         </div>
     </body>

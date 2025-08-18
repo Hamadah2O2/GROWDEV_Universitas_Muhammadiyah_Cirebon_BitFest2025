@@ -7,3 +7,8 @@ on an Independent Campus
 # Kata sambutan 
 # Fakultas
 # Blog Intermezo
+
+# The Brainstorm
+- Akreditasi 
+- Keunggulan
+- 

@@ -1,11 +1,60 @@
-@import "tailwindcss" source("../../layouts/");
+@import 'tailwindcss';
+@import 'tailwindcss-animated';
 
 @theme {
-  --font-sans: "Poppins", "sans-serif";
+    --font-sans: 'Poppins', 'sans-serif';
 
-  --color-primary: #0352A1;
-  --color-primary-opacity-75: #0352a1bf;
-  --color-primary-dark: #002E5B;
-  --color-primary-light: #308AD0;
-  --color-warning: #FFC300;
+    --color-primary: #0352a1;
+    --color-primary-opacity-75: #0352a1bf;
+    --color-primary-dark: #002e5b;
+    --color-primary-light: #308ad0;
+    --color-warning: #ffc300;
+}
+
+.cta-hero {
+    @apply 
+    mt-4
+    inline-block
+    rounded-xl
+    bg-primary
+    px-8
+    py-4
+    text-lg
+    font-bold
+    text-yellow-300
+    shadow-lg;
+
+    &:hover {
+        @apply
+        bg-blue-900
+        scale-105
+        text-yellow-300;
+    }
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 100ms;
+}
+
+.cta-hero.outline {
+    @apply scale-100;
+    box-sizing: content-box;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+}
+
+#navbar {
+    & .nav-link {
+        @apply flex h-28 items-center text-gray-50 transition px-6 hover:text-gray-200/75;
+    }
+
+    &:not(.bg-transparent) {
+        & img {
+            @apply h-17;
+        }
+        & .nav-link {
+            @apply flex h-17 items-center text-gray-900 transition px-6 hover:text-gray-900/75;
+        }
+    }
 }

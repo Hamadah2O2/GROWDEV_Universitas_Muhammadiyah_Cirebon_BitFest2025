@@ -37,6 +37,16 @@ params:
   email: info@cic.ac.id
   phone_number: +62 231-2004-18
   address: Jl. Kesambi No. 202, Cirebon City
-  socials: 
+  maps: https://maps.app.goo.gl/Q61z6UjkmNavj8WL7
+  social:
     - name: instagram
       link: https://www.instagram.com/universitas_cic
+      icon: fa-brands fa-instagram
+
+    - name: facebook
+      link: https://www.facebook.com/stmik.cic.3
+      icon: fa-brands fa-facebook-f
+
+    - name: twitter
+      link: https://twitter.com/stmikcic
+      icon: fa-brands fa-twitter
