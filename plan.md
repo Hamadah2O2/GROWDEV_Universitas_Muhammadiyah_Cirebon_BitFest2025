@@ -1,12 +1,18 @@
+
 # Hero 
 Technopreneur UNIVERSITY 
 Becoming a Technopreneur 
 on an Independent Campus
 
-# Keunggulan
-# Kata sambutan 
-# Fakultas
-# Blog Intermezo
+# informasi mengenai data dosen, mahasiswa dan alumni
+berapa jumlah dosen mahasiswa dan alumni dan lain lain 
+## Fakultas
+
+# fakultas
+# fasilitas
+# agenda
+# testimoni
+# Kerjasama / afiliasi
 
 # The Brainstorm
 - Akreditasi 
