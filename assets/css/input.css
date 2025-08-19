@@ -68,3 +68,7 @@
     rounded-xl
     bg-primary-dark/10;
 }
+
+.shadow-card {
+    @apply shadow-lg;
+}
