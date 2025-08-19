@@ -7,26 +7,32 @@ menus:
     - name: Home Page
       pageRef: /
       weight: 1
-
-    - name: Hero
-      pageRef: /
-      weight: 2
       params: 
         fragment: hero
 
-    - name: Profile
+    - name: Civitas Academica
+      pageRef: /
+      weight: 2
+      params: 
+        fragment: civitasAcademica
+
+    - name: Fakulatas & Prodi
       pageRef: /
       weight: 3
       params: 
-        fragment: about
+        fragment: faculty
 
-    - name: Posts
-      pageRef: /posts
+    - name: Fasilitas
+      pageRef: /
       weight: 4
+      params: 
+        fragment: facilities
 
-    - name: Tags
-      pageRef: /tags
+    - name: Afiliasi
+      pageRef: /
       weight: 5
+      params: 
+        fragment: affiliate
 
 module:
   hugoVersion:
