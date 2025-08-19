@@ -23,12 +23,13 @@ button {
 .cta-hero {
     @apply 
     mt-4
-    inline-block
+    md:inline-block
     rounded-xl
     bg-primary
     px-6
     py-3
-    text-lg
+    text-base
+    md:text-lg
     font-bold
     text-yellow-300
     shadow-lg;
