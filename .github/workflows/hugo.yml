@@ -48,8 +48,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Install and run tailwind
-        run: "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css"
+      - name: Install and run tailwindcss
+        run: "npm run build:css"
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
