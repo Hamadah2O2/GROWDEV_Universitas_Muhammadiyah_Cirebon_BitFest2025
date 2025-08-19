@@ -37,6 +37,7 @@ params:
   email: info@cic.ac.id
   phone_number: +62 231-2004-18
   address: Jl. Kesambi No. 202, Cirebon City
+  address_full: Jl. Kesambi No. 202, Drajat, Kec. Kesambi, Kota Cirebon, Jawa Barat 45133
   maps: https://maps.app.goo.gl/Q61z6UjkmNavj8WL7
 
   social:

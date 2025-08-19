@@ -1,1 +1,100 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div>
+            <div class="text-teal-900">
+                {{ with resources.Get "images/ucic_logo.png" }}
+                    <img src="{{ .RelPermalink }}" alt="logo_ucic" class="h-28 pt-2 transition-all duration-300 hover:brightness-124" />
+                {{ end }}
+            </div>
+
+            {{ $email := .Site.Params.email }}
+            {{ $phone := .Site.Params.phone_number }}
+            {{ $address := .Site.Params.address_full }}
+            {{ $mapsLink := .Site.Params.maps }}
+
+
+            <p class="mt-4 max-w-xs text-base text-gray-500">{{ $address }}</p>
+
+            <ul class="mt-8 flex gap-6">
+                {{ range .Site.Params.social }}
+                    <li>
+                        <a href="{{ .link }}" rel="noreferrer" target="_blank" class="text-xl text-gray-700 transition hover:opacity-75">
+                            <span class="sr-only">{{ .name }}</span>
+                            <i class="{{ .icon }}"></i>
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+            <div>
+                <p class="font-medium text-gray-900">Menu</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Fakultas</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Post</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Alumni</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Door</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-medium text-gray-900">Helpful Links</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">FAQs</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">PMB</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-medium text-gray-900">Media Partner</p>
+
+                <ul class="mt-6 space-y-4 text-sm">
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Sekolah Pelita Bangsa</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Harapanku</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">English First</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">eSDA</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75">Century 21</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p class="text-xs text-gray-500">&copy; {{ now.Year }}. GrowDev. All rights reserved.</p>
+</div>
