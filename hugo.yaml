@@ -38,6 +38,7 @@ params:
   phone_number: +62 231-2004-18
   address: Jl. Kesambi No. 202, Cirebon City
   maps: https://maps.app.goo.gl/Q61z6UjkmNavj8WL7
+
   social:
     - name: instagram
       link: https://www.instagram.com/universitas_cic
@@ -50,3 +51,20 @@ params:
     - name: twitter
       link: https://twitter.com/stmikcic
       icon: fa-brands fa-twitter
+
+  counts:
+    - name: Dosen Expert
+      icon: fa-solid fa-users
+      count: 200
+      desc: Pengajar berpengalaman dengan kompetensi global.
+
+    - name: Mahasiswa
+      icon: fa fa-graduation-cap
+      count: 1200
+      desc: Generasi penerus yang aktif mengembangkan potensi.
+
+    - name: Alumni
+      icon: fa fa-user-graduate
+      count: 2000
+      desc: Lulusan sukses yang berkontribusi di berbagai sektor industri.
+

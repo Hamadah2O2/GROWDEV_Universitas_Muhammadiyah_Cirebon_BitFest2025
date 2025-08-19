@@ -6,9 +6,9 @@ on an Independent Campus
 
 # informasi mengenai data dosen, mahasiswa dan alumni
 berapa jumlah dosen mahasiswa dan alumni dan lain lain 
-## Fakultas
 
 # fakultas
+
 # fasilitas
 # agenda
 # testimoni

@@ -40,7 +40,6 @@
 
 .cta-hero.outline {
     @apply scale-100;
-    box-sizing: content-box;
     outline: none;
     background-color: transparent;
     border: 2px solid var(--color-primary);
@@ -59,4 +58,13 @@
             @apply flex h-20 items-center text-gray-900 transition px-6 hover:text-gray-900/75;
         }
     }
+}
+
+.box-count{
+    @apply
+    p-10
+    grow
+    shadow-lg
+    rounded-xl
+    bg-primary-dark/10;
 }

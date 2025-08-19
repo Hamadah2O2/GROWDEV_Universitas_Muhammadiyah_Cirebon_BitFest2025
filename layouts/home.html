@@ -2,7 +2,7 @@
     <!-- Hero Section -->
     <div id="hero" class="relative h-[90dvh] w-full">
         <!-- gradient overlay -->
-        <div class="absolute inset-0 h-full w-full bg-linear-to-b from-transparent to-primary-dark to-85%"></div>
+        <div class="to-primary absolute inset-0 h-full w-full bg-linear-to-b from-transparent to-85%"></div>
 
         <!-- Background Image  -->
         {{- with resources.Get "images/gedung.jpeg" -}}
@@ -17,7 +17,7 @@
             <div class="container mx-auto flex h-full items-center justify-center px-4 pt-8 sm:px-6 lg:px-8">
                 <div class="">
                     <div class="text-center">
-                        <h1 class="mb-3 inline-block border-r-9 border-r-yellow-600 bg-primary-opacity-75 px-4 py-2 text-6xl font-bold text-nowrap text-yellow-300">
+                        <h1 class="bg-primary/75 mb-3 inline-block border-r-9 border-r-yellow-600 px-4 py-2 text-6xl font-bold text-nowrap text-yellow-300">
                             Technopreneur
                             <span class="text-blue-300 uppercase">UNIVERSITY</span>
                         </h1>
@@ -39,14 +39,36 @@
     </div>
 
     <!-- Count Section -->
-    <div class="h-screen w-full bg-primary-dark pt-20">
-        <div class="container mx-auto ">
-            <div class="text-center">
-                <h1 class="mb-4 text-5xl font-extrabold text-white opacity-0 intersect:animate-fade-down intersect:opacity-100 intersect-once">Civitas <span class="text-yellow-400">Academica</span></h1>
-                <span class="inline-block w-[45%] text-lg text-white opacity-0 intersect:animate-fade-down intersect:opacity-100 intersect-once">Jadilah bagian dari civitas akademika kami: mahasiswa, dosen, dan inovator perancang masa depan.</span>
+    <div class="bg-primary w-full py-20">
+        <div class="container mx-auto">
+            <div class="mb-10 text-center">
+                <h1 class="intersect-once intersect-full intersect:animate-fade-down intersect:opacity-100 mb-3.5 text-5xl font-extrabold text-white opacity-0">
+                    Civitas
+                    <span class="text-yellow-400">Academica</span>
+                </h1>
+                <span class="intersect-once intersect-full animate-delay-300 intersect:animate-fade-down intersect:opacity-100 inline-block w-[45%] text-lg text-white opacity-0">Jadilah bagian dari civitas akademika kami: mahasiswa, dosen, dan inovator perancang masa depan.</span>
+            </div>
+            <div class="flex gap-20">
+                {{ range .Site.Params.counts }}
+                    <div class="box-count intersect:animate-fade-up intersect-once">
+                        <div class="text-primary-dark mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400 p-4 text-4xl font-bold"><i class="{{ .icon }}"></i></div>
+                        <div class="flex items-end justify-center">
+                            <span class="count-it count-it text-5xl font-bold text-white" data-count="{{ .count }}">0</span>
+                            <span class="text-2xl font-extrabold text-yellow-400">+</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <h2 class="text-xl font-extrabold text-white uppercase">{{ .name }}</h2>
+                        </div>
+                        <div class="flex items-center justify-center"><span class="text-center text-base text-gray-200/75">{{ .desc }}</span></div>
+                    </div>
+                {{ end }}
             </div>
         </div>
     </div>
+
+
+    <!-- Faculty -->
+    <div class="h-screen w-full"></div>
 
     <!-- Content  -->
     {{ .Content }}
