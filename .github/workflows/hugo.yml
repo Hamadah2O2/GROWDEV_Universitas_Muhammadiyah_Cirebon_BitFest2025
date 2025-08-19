@@ -49,7 +49,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Install Node.js 2
-        run: "npm ci --include=dev"
+        run: "npm ci"
       - name: Check Tailwind
         run: npx tailwindcss --version
       - name: Install and run tailwindcss
