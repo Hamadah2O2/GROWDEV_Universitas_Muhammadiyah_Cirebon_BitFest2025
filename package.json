@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server -D --disableFastRender & npm run tailwind",
-    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css",
-    "tailwind": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css -w"
+    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css",
+    "tailwind": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css -w"
   },
   "keywords": [],
   "author": "",
