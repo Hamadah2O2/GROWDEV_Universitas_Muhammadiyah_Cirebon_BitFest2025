@@ -12,6 +12,10 @@
     --color-warning: #ffc300;
 }
 
+button {
+    cursor: pointer;
+}
+
 .cta-hero {
     @apply 
     mt-4

@@ -1,6 +1,6 @@
 {{ define "main" }}
     <!-- Hero Section -->
-    <div id="hero" class="relative h-[90dvh] w-full">
+    <section id="hero" class="relative h-[90dvh] w-full">
         <!-- gradient overlay -->
         <div class="to-primary absolute inset-0 h-full w-full bg-linear-to-b from-transparent to-85%"></div>
 
@@ -36,10 +36,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Count Section -->
-    <div class="bg-primary w-full py-20">
+    <section class="bg-primary w-full py-20">
         <div class="container mx-auto">
             <div class="mb-10 text-center">
                 <h1 class="intersect-once intersect-full intersect:animate-fade-down intersect:opacity-100 mb-3.5 text-5xl font-extrabold text-white opacity-0">
@@ -64,7 +64,7 @@
                 {{ end }}
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Faculty -->
     <section class="fade-in bg-gradient-to-br from-gray-200 to-white py-20">
@@ -285,15 +285,119 @@
             </div>
             <div class="mt-16 text-center">
                 <div class="bg-primary-dark rounded-2xl p-8 md:p-12">
-                    <h3 class="font-poppins text-white mb-4 text-2xl font-bold md:text-3xl">Siap Memulai Perjalanan Anda?</h3>
-                    <p class="font-opensans text-white/80 mx-auto mb-6 max-w-2xl text-lg">Jelajahi program studi komprehensif kami dan temukan yang paling sesuai dengan tujuan karir Anda</p>
+                    <h3 class="font-poppins mb-4 text-2xl font-bold text-white md:text-3xl">Siap Memulai Perjalanan Anda?</h3>
+                    <p class="font-opensans mx-auto mb-6 max-w-2xl text-lg text-white/80">Jelajahi program studi komprehensif kami dan temukan yang paling sesuai dengan tujuan karir Anda</p>
                     <div class="flex flex-col justify-center gap-4 sm:flex-row">
-                        <button class="bg-yellow-400 text-primary-dark font-poppins hover:shadow-gold transform rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105">Lihat Semua Program</button>
-                        <button class="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-university-navy font-poppins rounded-lg border-2 px-8 py-3 font-semibold transition-all duration-300">
-                            Unduh Brosur
-                        </button>
+                        <button class="text-primary-dark font-poppins hover:shadow-gold transform rounded-lg bg-yellow-400 px-8 py-3 font-semibold transition-all duration-300 hover:scale-105">Lihat Semua Program</button>
+                        <button class="hover:text-primary-dark font-poppins rounded-lg border-2 border-yellow-400 px-8 py-3 font-semibold text-yellow-400 transition-all duration-300 hover:bg-yellow-400">Unduh Brosur</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="bg-primary-dark fade-in py-20">
+        <div class="container mx-auto px-4">
+            <div class="mb-16 text-center">
+                <h2 class="font-poppins text-white mb-4 text-4xl font-bold md:text-5xl">
+                    <span class="bg-yellow-400 bg-clip-text text-transparent">Fasilitas</span>
+                    Kampus
+                </h2>
+                <p class="font-opensans text-white/80 mx-auto max-w-2xl text-lg">Rasakan fasilitas yang di desain untuk meningkatkan pengalaman belajar mu!</p>
+            </div>
+            <div class="mb-8 hidden gap-6 md:grid md:grid-cols-2">
+
+                {{ range .Site.Params.facilities }}
+                    <div class="group shadow-yellow-400 hover:shadow-gold relative transform overflow-hidden rounded-xl transition-all duration-500 hover:scale-105">
+                        <div class="aspect-w-16 aspect-h-10 relative">
+                            {{ $title := .title }}
+                            {{ with resources.Get .img }}
+                                <img src="{{ .RelPermalink }}" alt="{{ $title }}" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            {{ end }}
+                            <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                            <div class="absolute right-0 bottom-0 left-0 translate-y-4 transform p-6 transition-transform duration-300 group-hover:translate-y-0">
+                                <h3 class="font-poppins mb-2 text-xl font-bold text-white">{{ $title }}</h3>
+                                <p class="font-opensans text-white/90 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">{{ .desc }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+                {{/*<div class="group shadow-yellow-400 hover:shadow-gold relative transform overflow-hidden rounded-xl transition-all duration-500 hover:scale-105">*/}}
+                {{/*    <div class="aspect-w-16 aspect-h-10 relative">*/}}
+                {{/*        <img src="/assets/auditorium-BQlKgzPd.jpg" alt="Modern Auditorium" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110" />*/}}
+                {{/*        <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>*/}}
+                {{/*        <div class="absolute right-0 bottom-0 left-0 translate-y-4 transform p-6 transition-transform duration-300 group-hover:translate-y-0">*/}}
+                {{/*            <h3 class="font-poppins text-white mb-2 text-xl font-bold">Modern Auditorium</h3>*/}}
+                {{/*            <p class="font-opensans text-white/90 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">State-of-the-art auditorium with advanced audio-visual technology for lectures and events</p>*/}}
+                {{/*        </div>*/}}
+                {{/*    </div>*/}}
+                {{/*</div>*/}}
+                {{/*<div class="group shadow-yellow-400 hover:shadow-gold relative transform overflow-hidden rounded-xl transition-all duration-500 hover:scale-105">*/}}
+                {{/*    <div class="aspect-w-16 aspect-h-10 relative">*/}}
+                {{/*        <img src="/assets/classroom-ChMt8jIh.jpg" alt="Smart Classrooms" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110" />*/}}
+                {{/*        <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>*/}}
+                {{/*        <div class="absolute right-0 bottom-0 left-0 translate-y-4 transform p-6 transition-transform duration-300 group-hover:translate-y-0">*/}}
+                {{/*            <h3 class="font-poppins text-white mb-2 text-xl font-bold">Smart Classrooms</h3>*/}}
+                {{/*            <p class="font-opensans text-white/90 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">Interactive learning spaces equipped with digital whiteboards and modern furniture</p>*/}}
+                {{/*        </div>*/}}
+                {{/*    </div>*/}}
+                {{/*</div>*/}}
+                {{/*<div class="group shadow-yellow-400 hover:shadow-gold relative transform overflow-hidden rounded-xl transition-all duration-500 hover:scale-105">*/}}
+                {{/*    <div class="aspect-w-16 aspect-h-10 relative">*/}}
+                {{/*        <img src="/assets/library-PP4G0McH.jpg" alt="Digital Library" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110" />*/}}
+                {{/*        <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>*/}}
+                {{/*        <div class="absolute right-0 bottom-0 left-0 translate-y-4 transform p-6 transition-transform duration-300 group-hover:translate-y-0">*/}}
+                {{/*            <h3 class="font-poppins text-white mb-2 text-xl font-bold">Digital Library</h3>*/}}
+                {{/*            <p class="font-opensans text-white/90 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">Comprehensive library with digital resources and comfortable study areas</p>*/}}
+                {{/*        </div>*/}}
+                {{/*    </div>*/}}
+                {{/*</div>*/}}
+                {{/*<div class="group shadow-yellow-400 hover:shadow-gold relative transform overflow-hidden rounded-xl transition-all duration-500 hover:scale-105">*/}}
+                {{/*    <div class="aspect-w-16 aspect-h-10 relative">*/}}
+                {{/*        <img src="/assets/lab-DZefDYwQ.jpg" alt="Innovation Labs" class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110" />*/}}
+                {{/*        <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>*/}}
+                {{/*        <div class="absolute right-0 bottom-0 left-0 translate-y-4 transform p-6 transition-transform duration-300 group-hover:translate-y-0">*/}}
+                {{/*            <h3 class="font-poppins text-white mb-2 text-xl font-bold">Innovation Labs</h3>*/}}
+                {{/*            <p class="font-opensans text-white/90 opacity-0 transition-opacity delay-100 duration-300 group-hover:opacity-100">Cutting-edge laboratories for hands-on learning and research projects</p>*/}}
+                {{/*        </div>*/}}
+                {{/*    </div>*/}}
+                {{/*</div>*/}}
+            </div>
+            <div class="relative md:hidden">
+                <div class="overflow-hidden rounded-xl">
+                    <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
+                        {{ range .Site.Params.facilities }}
+                            <div class="relative w-full flex-shrink-0">
+                                {{ with resources.Get .image }}
+                                    <img src="{{ .RelPermalink }}" alt="{{ .title }}" class="h-64 w-full object-cover" />
+                                {{ end }}
+                                <div class="from-primary-dark/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent"></div>
+                                <div class="absolute right-0 bottom-0 left-0 p-6">
+                                    <h3 class="font-poppins text-white mb-2 text-xl font-bold">{{ .title }}</h3>
+                                    <p class="font-opensans text-white/90">{{ .desc }}</p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <button class="bg-white/20 text-white hover:bg-yellow-400 hover:text-primary-dark absolute top-1/2 left-4 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full backdrop-blur-sm transition-all duration-300">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="bg-white/20 text-white hover:bg-yellow-400 hover:text-primary-dark absolute top-1/2 right-4 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full backdrop-blur-sm transition-all duration-300">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <div class="mt-6 flex justify-center space-x-2">
+                    <button class="bg-yellow-400 h-3 w-3 scale-125 rounded-full transition-all duration-300"></button>
+                    <button class="bg-white/30 hover:bg-white/50 h-3 w-3 rounded-full transition-all duration-300"></button>
+                    <button class="bg-white/30 hover:bg-white/50 h-3 w-3 rounded-full transition-all duration-300"></button>
+                    <button class="bg-white/30 hover:bg-white/50 h-3 w-3 rounded-full transition-all duration-300"></button>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <button class="bg-yellow-400 text-primary-dark font-poppins hover:shadow-yellow-400 transform rounded-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105">Schedule Campus Tour</button>
             </div>
         </div>
     </section>

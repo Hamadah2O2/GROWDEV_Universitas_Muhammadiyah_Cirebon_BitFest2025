@@ -68,3 +68,20 @@ params:
       count: 2000
       desc: Lulusan sukses yang berkontribusi di berbagai sektor industri.
 
+  facilities:
+    - title: Auditorium
+      desc: Auditorium luas yang digunakan untuk acara penting
+      img: images/auditorium.jpeg
+
+    - title: Ruang Kelas
+      desc: Tempat kegiatan belajar dan mengajar mahasiswa dan dosen.
+      img: images/ruangKelas.jpg
+
+    - title: Lab Komputer
+      desc: Komputer yang di siap kan untuk kebutuhan mahasiswa.
+      img: images/labKomputer.jpeg
+
+    - title: Perpustakaan
+      desc: Referensi, penelitian, dalam satu pustaka untuk kebutuhan studi.
+      img: images/perpustakaan.jpeg
+
